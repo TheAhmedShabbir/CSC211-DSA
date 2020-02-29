@@ -5,7 +5,7 @@ int main(){
     int num1,num2,op,r = 0,result[10];
     char menu;
 
-    cout << "Press 1 to use Calculator\nPress 2 for History\n";
+    cout << "Press 1 to use Calculator\n";
     cin >> op;
     if (op == 1){
             cout << "Enter first number:\n";
@@ -14,7 +14,6 @@ int main(){
             cin >> num2;
         for (int i = 0; i < 2 ; ++i) {
             int array[2] = {num1,num2};
-            cout << array[i] << " ";
         }
 
         cout << "Press a for addition\nPress s for subtraction\nPress m for multiplication\nPress d for division\n";
@@ -44,12 +43,15 @@ int main(){
             default:
                 cout << "invalid!";
         }
-    }
-    else if (op == 2){
 
-        for (int i = 0; i < 4; i++) {
-            result[i] = {r};
-            cout << result[i];
+        cout << "\nPress 2 for History\n";
+        cin >> op;
+        if (op == 2){
+
+            for (int i = 0; i < 1; i++) {
+                result[i] = {r};
+                cout << result[i];
+            }
         }
     }
     else
