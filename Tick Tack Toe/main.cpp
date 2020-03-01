@@ -7,7 +7,7 @@ char player1 = 'x', computer = 'o';
 
 int main() {
     int player2;
-    int i = 0, box = 0;
+    int i = 0, box;
 
     while (i < 5) {
         board();
@@ -15,21 +15,15 @@ int main() {
         //player 1 play
         cout << "Enter where to put X (1 - 9): \n";
         cin >> box;
-        if (box != player2){
-            array[box - 1] = player1;
-        }
-        if (array[box] == player2){
-            cout << "try again\n";
-        }
+        array[box - 1] = player1;
 
         //player 2 play
-        player2 = rand() % 10;
-         if (player2 != box) {
-            array[player2 - 1] = computer;
-        } if (array[player2] == box){
-           cout << "try again\n";
-        }
+        b: player2 = rand() % 10;
 
+         if (array[player2 - 1] == player1){
+           goto b;
+        }
+        array[player2 - 1] = computer;
         board();
     i++;
     }
