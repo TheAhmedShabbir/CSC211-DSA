@@ -1,76 +1,100 @@
 #include <iostream>
 using namespace std;
+char array[9] = {};
+void board();
+void checkWin();
+char player1 = 'x', computer = 'o';
 
 int main() {
-    char array[9] = {},choice;
-    int box;
+    int player2;
+    int i = 0, box = 0;
 
-    do {
-//choose symbol
-        cout << "Choose your Symbol 'x' and 'o': \n";
-        cin >> choice;
-//position
-        if (choice == 'x') {
-            do {
-            cout << "Enter in which box you want to put sign: \n";
-            cout << "boxes: 1st 2nd 3rd 4th 5th 6th 7th 8th 9th\n";
-            cin >> box;
+    while (i < 5) {
+        board();
 
-            if (box == 1) {
-                array[0] = 'x';
-            }
-            if (box == 2) {
-                array[1] = 'x';
-            }
-            if (box == 3) {
-                array[2] = 'x';
-            }
-            if (box == 4) {
-                array[3] = 'x';
-            }
-            if (box == 5) {
-                array[4] = 'x';
-            }
-            if (box == 6) {
-                array[5] = 'x';
-            }
-            if (box == 7) {
-                array[6] = 'x';
-            }
-            if (box == 8) {
-                array[7] = 'x';
-            }
-            if (box == 9) {
-                array[8] = 'x';
-            }
-            cout << array[0] << "     |" << array[1] << "     |" << array[2];
-            cout << "\n______";
-            cout << "|______";
-            cout << "|______\n";
-            cout << array[3] << "     |" << array[4] << "     |" << array[5];
-            cout << "\n______";
-            cout << "|______";
-            cout << "|______\n";
-            cout << array[6] << "     |" << array[7] << "     |" << array[8] << "\n";
-            }
-            while (box != 9);
-            //result
-            if (array[0] == array[1] && array[1] == array[2]){
-                cout << "x wins";
-                break;
-            }
-            if (array[3] == array[4] && array[4] == array[5]){
-                cout << "x wins";
-                break;
-            }
-            if (array[6] == array[7] && array[7] == array[8]){
-                cout << "x wins";
-                break;
-            }
+        //player 1 play
+        cout << "Enter where to put X (1 - 9): \n";
+        cin >> box;
+        if (box != player2){
+            array[box - 1] = player1;
         }
-        else
-            cout << "Invalid input..\nPlease try again!\n";
+        if (array[box] == player2){
+            cout << "try again\n";
+        }
+
+        //player 2 play
+        player2 = rand() % 10;
+         if (player2 != box) {
+            array[player2 - 1] = computer;
+        } if (array[player2] == box){
+           cout << "try again\n";
+        }
+
+        board();
+    i++;
     }
-    while (choice != 'x' && choice != 'o');
+    checkWin();
     return 0;
+}
+void board(){
+    cout << array[0] << "     |" << array[1] << "     |" << array[2];
+    cout << "\n______";
+    cout << "|______";
+    cout << "|______\n";
+    cout << array[3] << "     |" << array[4] << "     |" << array[5];
+    cout << "\n______";
+    cout << "|______";
+    cout << "|______\n";
+    cout << array[6] << "     |" << array[7] << "     |" << array[8] << "\n";
+}
+
+void checkWin(){
+    if (array[0] == player1 && array[1] == player1 && array[2] == player1) {
+        cout << player1 <<" won";
+    }
+    if (array[0] == computer && array[1] == computer && array[2] == computer){
+        cout << computer <<" won";
+    }
+    if (array[3] == player1 && array[4] == player1 && array[5] == player1) {
+        cout << player1 <<" won";
+    }
+    if (array[3] == computer && array[4] == computer && array[5] == computer) {
+        cout << computer <<" won";
+    }
+    if (array[6] == player1 && array[7] == player1 && array[8] == player1) {
+        cout << player1 <<" won";
+    }
+    if (array[6] == computer && array[7] == computer && array[8] == computer) {
+        cout << computer <<" won";
+    }
+    if (array[0] == player1 && array[3] == player1 && array[6] == player1) {
+        cout << player1 <<" won";
+    }
+    if (array[0] == computer && array[3] == computer && array[6] == computer) {
+        cout << computer <<" won";
+    }
+    if (array[1] == player1 && array[4] == player1 && array[7] == player1) {
+        cout << player1 <<" won";
+    }
+    if (array[1] == computer && array[4] == computer && array[7] == computer) {
+        cout << computer <<" won";
+    }
+    if (array[2] == player1 && array[5] == player1 && array[8] == player1) {
+        cout << player1 <<" won";
+    }
+    if (array[2] == computer && array[5] == computer && array[8] == computer) {
+        cout << computer <<" won";
+    }
+    if (array[0] == player1 && array[4] == player1 && array[8] == player1) {
+        cout << player1 <<" won";
+    }
+    if (array[0] == computer && array[4] == computer && array[8] == computer) {
+        cout << computer <<" won";
+    }
+    if (array[2] == player1 && array[4] == player1 && array[6] == player1) {
+        cout << player1 <<" won";
+    }
+    if (array[2] == computer && array[4] == computer && array[6] == computer) {
+        cout << computer <<" won";
+    }
 }
