@@ -15,7 +15,7 @@ int main() {
         //player 1 play
         a: cout << "Enter where to put X (1 - 9): \n";
         cin >> box;
-        if (array[box - 1] == computer){
+        if (array[box - 1] == player1 || array[box - 1] == computer){
             goto a;
         }
         array[box - 1] = player1;
