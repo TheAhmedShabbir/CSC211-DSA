@@ -3,6 +3,6 @@
 using namespace std;
 
 int main() {
-    cout << "airport";
+    cout << "airport program";
     return 0;
 }
