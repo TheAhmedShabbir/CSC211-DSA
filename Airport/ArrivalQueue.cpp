@@ -6,9 +6,6 @@ public:
     int counter;
     int array[size] = {};
     void Enqueue(int num) {
-        for(counter = 0; counter > size; counter++){
-
-        }
     }
 
     bool isFull() {
