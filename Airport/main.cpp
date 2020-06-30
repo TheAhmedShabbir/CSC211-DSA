@@ -15,7 +15,7 @@ int main() {
             "Press 2 for Arrival\n"
             "Press 3 for Emergency\n"
             "Press 4 for Reports\n";
-    cin >> &choice;
+    cin >> choice;
 
     switch(choice){
 
