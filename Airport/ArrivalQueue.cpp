@@ -1,8 +1,8 @@
 
 class ArrivalQueue {
 
-private:
-
 public:
+    void Enqueue(int num) {
 
+    }
 };
