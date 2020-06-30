@@ -1,8 +1,15 @@
 #include <iostream>
+#include "ArrivalQueue.cpp"
+#include "ArrivalStruct.cpp"
+#include "DepartureQueue.cpp"
+#include "DepartureStruct.cpp"
 
 using namespace std;
 
 int main() {
+    ArrivalQueue arrival;
+    DepartureQueue departure;
+
     cout << "--------MENU---------\n"
             "Press 1 for Departure\n"
             "Press 2 for Arrival\n"
