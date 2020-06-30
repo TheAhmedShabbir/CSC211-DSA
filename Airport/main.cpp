@@ -18,7 +18,12 @@ int main() {
     cin >> choice;
 
     switch(choice){
-
+        case 1:
+            departure;
+            break;
+        case 2:
+            arrival.Enqueue(1);
+            break;
     }
     return 0;
 }
