@@ -6,7 +6,19 @@
 
 #IncludeRegexTransform: 
 
+D:/CSC211-DSA/Airport/ArrivalQueue.cpp
+iostream
+-
+
+D:/CSC211-DSA/Airport/DepartureQueue.cpp
+iostream
+-
+
 D:/CSC211-DSA/Airport/main.cpp
 iostream
 -
+ArrivalQueue.cpp
+D:/CSC211-DSA/Airport/ArrivalQueue.cpp
+DepartureQueue.cpp
+D:/CSC211-DSA/Airport/DepartureQueue.cpp
 
