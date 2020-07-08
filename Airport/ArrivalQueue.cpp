@@ -1,48 +1,48 @@
 #include <iostream>
+#include "ArrivalStruct.cpp"
+
 using namespace std;
-#define size 20
+#define size 10
+
 class ArrivalQueue{
 private:
     int counter,ArrivalArray[size],front,tail;
 public:
     bool isFull(){
-        if(counter >= size){
+        if(tail > size){
             return true;
         } else
             return false;
     }
-
     bool isEmpty(){
         if (counter <= 0){
             return true;
         } else
             return false;
     }
-    bool Enqueue(int num){
+
+    void Enqueue(int flightID){
         if(isFull()){
-            return "Cannot add Flight. Lane is Full";
-        }
-        else
-            ArrivalArray[tail++] = num;
-        return "Flight added!!";
-    }
-
-    int Dequeue(){
-        if (isEmpty()){
-            cout << "Arrival is Empty!!";
+            cout << "Queue is full!!\n";
         } else
-            int num = ArrivalArray[front];
-            front++; counter++;
-            return 1;
+            ArrivalArray[tail++] = flightID;
+        cout << "FLight Added\n";
     }
-
+    void Dequeue(int flightID){
+        if (isEmpty()){
+            cout << "Arrival is Empty!!\n";
+        } else
+            int num = ArrivalArray[front++];
+        counter--;
+    }
     void display(){
-        for (counter = 0; counter <= size ; ++counter) {
+        for (counter = 0; counter <= size ; counter++) {
             if(ArrivalArray[counter] == 0){
                 cout << " ";
             } else
-            cout << ArrivalArray[counter];
+        cout << ArrivalArray[counter];
             cout << " ";
         }
+        cout << "\n";
     }
 };
