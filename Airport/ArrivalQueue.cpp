@@ -29,11 +29,10 @@ public:
         if(isFull()){
             cout << "Queue is full!!\n";
         } else
-            ArrivalInfo();
-        ArrivalArray[tail].flightID = arrivalStruct.flightID;
+            ArrivalArray[tail].flightID = arrivalStruct.flightID;
         ArrivalArray[tail].fuel = arrivalStruct.fuel;
         ArrivalArray[tail].destination = arrivalStruct.destination;
-        ArrivalArray[tail].runwayID = arrivalStruct.runwayID;
+        ArrivalArray[tail++].runwayID = arrivalStruct.runwayID;
         cout << "FLight Added\n";
     }
     void Dequeue(int flightID){
