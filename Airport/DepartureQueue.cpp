@@ -3,7 +3,7 @@ using namespace std;
 #define size 10
 
 struct Departure {
-    int flightID,fuel,runwayID;
+    int flightID,fuel,runwayID,priority = 0;
     string destination;
 };
 
@@ -13,6 +13,7 @@ private:
     Departure DepartureArray[size];
     Departure DepartureStruct;
 public:
+    int available_space = size - tail;
     bool isFull(){
         if(tail >= size){
             return true;
@@ -34,7 +35,9 @@ public:
         DepartureArray[tail].fuel = DepartureStruct.fuel;
         DepartureArray[tail].destination = DepartureStruct.destination;
         DepartureArray[tail].runwayID = DepartureStruct.runwayID;
+        DepartureArray[tail].priority = DepartureStruct.priority;
         cout << "Departure flight is added!!\n";
+        available_space--;
     }
     int Dequeue(int num){
         if (isEmpty()){
@@ -46,7 +49,7 @@ public:
     }
 
     void display(){
-        for (counter = 0; counter <= tail ; counter++) {
+        for (counter = 0; counter <= tail - 1 ; counter++) {
             cout << DepartureArray[counter].flightID;
             cout << " ";
             cout << DepartureArray[counter].fuel;
@@ -54,6 +57,8 @@ public:
             cout << DepartureArray[counter].destination;
             cout << " ";
             cout << DepartureArray[counter].runwayID;
+            cout << " ";
+            cout << DepartureArray[counter].priority;
             cout << " ";
         }
         cout << "\n";
@@ -68,5 +73,7 @@ public:
         cin >> DepartureStruct.destination;
         cout << "Runway ID:";
         cin >> DepartureStruct.runwayID;
+        cout << "Enter Priority: ";
+        cin >> DepartureStruct.priority;
     }
 };

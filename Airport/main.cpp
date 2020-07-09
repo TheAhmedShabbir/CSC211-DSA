@@ -4,12 +4,12 @@
 using namespace std;
 
 int main() {
-    ArrivalQueue ArrivalLane1{};
-    ArrivalQueue ArrivalLane2{};
+    ArrivalQueue ArrivalLane1;
+    ArrivalQueue ArrivalLane2;
     DepartureQueue DepartureLane1{};
     DepartureQueue DepartureLane2{};
 
-    int choice,fID;
+    int choice;
 
     do{
         m: cout << "-------Menu------\n"
@@ -25,20 +25,36 @@ int main() {
             goto m;
         }
         if(choice == 1){
-            ArrivalLane1.ArrivalInfo();
-            ArrivalLane1.Enqueue();
-            ArrivalLane1.display();
+            if(ArrivalLane2.Available_space > ArrivalLane1.Available_space){
+                ArrivalLane2.ArrivalInfo();
+                ArrivalLane2.Enqueue();
+                ArrivalLane2.display();
+            } else {
+                ArrivalLane1.ArrivalInfo();
+                ArrivalLane1.Enqueue();
+                ArrivalLane1.display();
+            }
         } else if(choice == 2){
-            DepartureLane1.DepartureInfo();
-            DepartureLane1.Enqueue();
-            DepartureLane1.display();
+            if(DepartureLane2.available_space > DepartureLane1.available_space){
+                DepartureLane2.DepartureInfo();
+                DepartureLane2.Enqueue();
+                DepartureLane2.display();
+            } else {
+                DepartureLane1.DepartureInfo();
+                DepartureLane1.Enqueue();
+                DepartureLane1.display();
+            }
         } else if(choice == 3){
-            cout << "Press 1 for Flight cancel Reports:\n"
-                    "Press 2 for Emergency Reports:\n";
+            cout << "Reports:\n";
+            cout << "Arrival Lane 1:\n";
+            ArrivalLane1.display();
+            cout << "Arrival Lane 2:\n";
+            ArrivalLane2.display();
+            cout << "Departure Lane 1:\n";
+            DepartureLane1.display();
+            cout << "Departure Lane 2:\n";
+            DepartureLane2.display();
         } else if (choice == 4){
-            cout << "Enter flight ID:\n";
-            cin >> fID;
-            ArrivalLane1.Emergency(fID);
             ArrivalLane1.display();
         }
     }
