@@ -9,10 +9,11 @@ int main() {
     DepartureQueue DepartureLane1{};
     DepartureQueue DepartureLane2{};
 
-    int choice;
+    int choice,fID;
 
     do{
-        m: cout << "Press 1 for Arrival\n"
+        m: cout << "-------Menu------\n"
+                   "Press 1 for Arrival\n"
                 "Press 2 for Departure\n"
                 "Press 3 for Reports\n"
                 "Press 4 for Emergency\n"
@@ -31,6 +32,14 @@ int main() {
             DepartureLane1.DepartureInfo();
             DepartureLane1.Enqueue();
             DepartureLane1.display();
+        } else if(choice == 3){
+            cout << "Press 1 for Flight cancel Reports:\n"
+                    "Press 2 for Emergency Reports:\n";
+        } else if (choice == 4){
+            cout << "Enter flight ID:\n";
+            cin >> fID;
+            ArrivalLane1.Emergency(fID);
+            ArrivalLane1.display();
         }
     }
     while (choice != 5);

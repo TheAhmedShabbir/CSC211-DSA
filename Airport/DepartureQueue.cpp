@@ -28,7 +28,7 @@ public:
 
     void Enqueue(){
         if(isFull()){
-            cout << "Departure flight is Full!!\n";
+            cout << "Departure flights are Full!!\n";
         } else
             DepartureArray[tail].flightID = DepartureStruct.flightID;
         DepartureArray[tail].fuel = DepartureStruct.fuel;
@@ -70,4 +70,3 @@ public:
         cin >> DepartureStruct.runwayID;
     }
 };
-
