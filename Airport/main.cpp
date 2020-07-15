@@ -28,14 +28,22 @@ int main() {
             int p;
             if(ArrivalLane2.Available_space > ArrivalLane1.Available_space){ // for load balancing
                 ArrivalLane2.ArrivalInfo();
-                cout << "Press 1 for Emergency Flight and Press 0 for regular Flight:\n";
+                p: cout << "Press 1 for Emergency Flight and Press 0 for regular Flight:\n";
                 cin >> p;
+                if(p > 1 || p < 0){
+                    cout << "Invalid Option\n";
+                    goto p;
+                }
                 ArrivalLane2.Enqueue(p);
                 ArrivalLane2.display();
             } else {
                 ArrivalLane1.ArrivalInfo();
-                cout << "Press 1 for Emergency Flight and Press 0 for regular Flight:\n";
+                d: cout << "Press 1 for Emergency Flight and Press 0 for regular Flight:\n";
                 cin >> p;
+                if(p > 1 || p < 0) {
+                    cout << "Invalid Option\n";
+                    goto d;
+                }
                 ArrivalLane1.Enqueue(p);
                 ArrivalLane1.display();
             }
@@ -43,14 +51,22 @@ int main() {
             int priority;
             if(DepartureLane2.available_space > DepartureLane1.available_space){ // for load balancing
                 DepartureLane2.DepartureInfo();
-                cout << "Press 1 for Emergency Flight and Press 0 for regular Flight:\n";
+                j: cout << "Press 1 for Emergency Flight and Press 0 for regular Flight:\n";
                 cin >> priority;
+                if(priority > 1 || priority < 0){
+                    cout << "Invalid Option\n";
+                    goto j;
+                }
                 DepartureLane2.Enqueue(priority);
                 DepartureLane2.display();
             } else {
                 DepartureLane1.DepartureInfo();
-                cout << "Press 1 for Emergency Flight and Press 0 for regular Flight:\n";
+                c: cout << "Press 1 for Emergency Flight and Press 0 for regular Flight:\n";
                 cin >> priority;
+                if(priority > 1 || priority < 0){
+                    cout << "Invalid Option\n";
+                    goto c;
+                }
                 DepartureLane1.Enqueue(priority);
                 DepartureLane1.display();
             }
