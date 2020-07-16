@@ -1,5 +1,5 @@
 #include <iostream>
-#define size 30
+#define size 20
 using namespace std;
 
 class stack {
