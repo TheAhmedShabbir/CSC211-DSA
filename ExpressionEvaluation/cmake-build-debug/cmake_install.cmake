@@ -1,4 +1,4 @@
-# Install script for directory: D:/CSC211-DSA/ExpressionEvaluation
+# Install script for directory: E:/CSC211-DSA/ExpressionEvaluation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/CSC211-DSA/ExpressionEvaluation/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "E:/CSC211-DSA/ExpressionEvaluation/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

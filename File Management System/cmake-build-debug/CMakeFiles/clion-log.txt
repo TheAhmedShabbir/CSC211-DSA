@@ -2,3 +2,6 @@
 -- Configuring done
 -- Generating done
 -- Build files have been written to: E:/CSC211-DSA/File Management System/cmake-build-debug
+
+Cannot get compiler information:
+	Compiler command timed out: C:\MinGW\bin\g++.exe -xc++ -g -std=gnu++1z -fpch-preprocess -v -dD -E

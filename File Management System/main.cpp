@@ -1,3 +1,4 @@
+//FA18-BCS-019 AHMED SHABBIR FILE MANAGEMENT SYSTEM
 #include <iostream>
 #include "FileManagement.cpp"
 #define Size 50
@@ -5,9 +6,10 @@
 using namespace std;
 
 int main() {
-    int choice;
+    int choice,space;
     char fName[Size],fExt[4],fData[100];
     FileManagement File{};
+    File.status();
     do {
             cout << "------Menu-----\n"
                     "Press 1 to create file\n"
@@ -23,8 +25,10 @@ int main() {
                 cin >> fExt;
                 cout << "Enter File Data \n";
                 cin >> fData;
+                cout << "Enter Space \n";
+                cin >> space;
 
-                File.createFile(fName, fExt, fData);
+                File.createFile(fName, fExt, fData,space);
             }
             else if (choice == 2){
                 cout << "Enter File Name \n";
@@ -32,12 +36,12 @@ int main() {
                 cout << "Enter File extension \n";
                 cin >> fExt;
 
-                File.deleteFile(fName, fExt);
+               File.deleteFile(fName, fExt);
             }
             else if (choice == 3){
                 cout << "Enter File Name \n";
                 cin >> fName;
-                cout << "Enter File extention \n";
+                cout << "Enter File extension \n";
                 cin >> fExt;
                 File.viewFile(fName, fExt);
             } else if(choice == 4){
@@ -45,6 +49,6 @@ int main() {
             } else
                 cout << "Invalid choice!!\n"
                         "Try Again!!\n";
-    } while (choice != 1 | choice != 2 || choice != 3 || choice != 4);
+    } while (choice != 1 || choice != 2 || choice != 3 || choice != 4);
     return 0;
 }
