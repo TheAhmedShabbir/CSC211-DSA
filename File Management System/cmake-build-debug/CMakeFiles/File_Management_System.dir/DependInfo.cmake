@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "E:/CSC211-DSA/File Management System/File Management.cpp" "E:/CSC211-DSA/File Management System/cmake-build-debug/CMakeFiles/File_Management_System.dir/File_Management.cpp.obj"
+  "E:/CSC211-DSA/File Management System/FileManagement.cpp" "E:/CSC211-DSA/File Management System/cmake-build-debug/CMakeFiles/File_Management_System.dir/FileManagement.cpp.obj"
   "E:/CSC211-DSA/File Management System/main.cpp" "E:/CSC211-DSA/File Management System/cmake-build-debug/CMakeFiles/File_Management_System.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

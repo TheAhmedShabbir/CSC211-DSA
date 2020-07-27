@@ -9,19 +9,28 @@ struct FData{
 };
 
 struct File{
-    char fileName[50];
-    char fileExt[4];
-    int start;
+    char fileName;
+    char fileExt;
+    int start, fileIndex;
 };
 
 class FileManagement {
 private:
-    FData fileData[Size];
-    FILE fileInfo[totalFiles];
+    FData fileData[100];
+    File fileInfo[totalFiles];
+    int counter;
 public:
 
     int createFile(char FileName[],char ext[],char FileData[]){
+        for(counter = 0; counter <= totalFiles; counter++){
+            fileInfo[counter].fileIndex = -1;
+        }
+        fileInfo[4].start = -3;
 
+        for (counter = 0; counter <= 100; counter++) {
+            fileData[counter].nextIndex = -1;
+        }
+        fileData[99].nextIndex = -3;
     }
 
     bool deleteFile(char FileName[],char ext[]){
@@ -29,7 +38,10 @@ public:
     }
 
     bool viewFile(char FileName[],char ext[]){
-
+        if(FileName[counter] != fileInfo->fileName && ext[counter] != fileInfo->fileExt) {
+            cout << "File not Exist!!\n";
+        } else
+            cout << fileData->Data;
     }
 };
 

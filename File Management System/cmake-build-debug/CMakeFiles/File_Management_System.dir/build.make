@@ -69,29 +69,29 @@ CMakeFiles/File_Management_System.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/File_Management_System.dir/main.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\CSC211-DSA\File Management System\main.cpp" -o CMakeFiles\File_Management_System.dir\main.cpp.s
 
-CMakeFiles/File_Management_System.dir/File_Management.cpp.obj: CMakeFiles/File_Management_System.dir/flags.make
-CMakeFiles/File_Management_System.dir/File_Management.cpp.obj: ../File\ Management.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\CSC211-DSA\File Management System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/File_Management_System.dir/File_Management.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\File_Management_System.dir\File_Management.cpp.obj -c "E:\CSC211-DSA\File Management System\File Management.cpp"
+CMakeFiles/File_Management_System.dir/FileManagement.cpp.obj: CMakeFiles/File_Management_System.dir/flags.make
+CMakeFiles/File_Management_System.dir/FileManagement.cpp.obj: ../FileManagement.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\CSC211-DSA\File Management System\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/File_Management_System.dir/FileManagement.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\File_Management_System.dir\FileManagement.cpp.obj -c "E:\CSC211-DSA\File Management System\FileManagement.cpp"
 
-CMakeFiles/File_Management_System.dir/File_Management.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/File_Management_System.dir/File_Management.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\CSC211-DSA\File Management System\File Management.cpp" > CMakeFiles\File_Management_System.dir\File_Management.cpp.i
+CMakeFiles/File_Management_System.dir/FileManagement.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/File_Management_System.dir/FileManagement.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\CSC211-DSA\File Management System\FileManagement.cpp" > CMakeFiles\File_Management_System.dir\FileManagement.cpp.i
 
-CMakeFiles/File_Management_System.dir/File_Management.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/File_Management_System.dir/File_Management.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\CSC211-DSA\File Management System\File Management.cpp" -o CMakeFiles\File_Management_System.dir\File_Management.cpp.s
+CMakeFiles/File_Management_System.dir/FileManagement.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/File_Management_System.dir/FileManagement.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\CSC211-DSA\File Management System\FileManagement.cpp" -o CMakeFiles\File_Management_System.dir\FileManagement.cpp.s
 
 # Object files for target File_Management_System
 File_Management_System_OBJECTS = \
 "CMakeFiles/File_Management_System.dir/main.cpp.obj" \
-"CMakeFiles/File_Management_System.dir/File_Management.cpp.obj"
+"CMakeFiles/File_Management_System.dir/FileManagement.cpp.obj"
 
 # External object files for target File_Management_System
 File_Management_System_EXTERNAL_OBJECTS =
 
 File_Management_System.exe: CMakeFiles/File_Management_System.dir/main.cpp.obj
-File_Management_System.exe: CMakeFiles/File_Management_System.dir/File_Management.cpp.obj
+File_Management_System.exe: CMakeFiles/File_Management_System.dir/FileManagement.cpp.obj
 File_Management_System.exe: CMakeFiles/File_Management_System.dir/build.make
 File_Management_System.exe: CMakeFiles/File_Management_System.dir/linklibs.rsp
 File_Management_System.exe: CMakeFiles/File_Management_System.dir/objects1.rsp

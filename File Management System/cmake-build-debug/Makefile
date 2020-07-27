@@ -122,32 +122,32 @@ File_Management_System/fast:
 	$(MAKE) -f CMakeFiles\File_Management_System.dir\build.make CMakeFiles/File_Management_System.dir/build
 .PHONY : File_Management_System/fast
 
-File_Management.obj: File_Management.cpp.obj
+FileManagement.obj: FileManagement.cpp.obj
 
-.PHONY : File_Management.obj
+.PHONY : FileManagement.obj
 
 # target to build an object file
-File_Management.cpp.obj:
-	$(MAKE) -f CMakeFiles\File_Management_System.dir\build.make CMakeFiles/File_Management_System.dir/File_Management.cpp.obj
-.PHONY : File_Management.cpp.obj
+FileManagement.cpp.obj:
+	$(MAKE) -f CMakeFiles\File_Management_System.dir\build.make CMakeFiles/File_Management_System.dir/FileManagement.cpp.obj
+.PHONY : FileManagement.cpp.obj
 
-File_Management.i: File_Management.cpp.i
+FileManagement.i: FileManagement.cpp.i
 
-.PHONY : File_Management.i
+.PHONY : FileManagement.i
 
 # target to preprocess a source file
-File_Management.cpp.i:
-	$(MAKE) -f CMakeFiles\File_Management_System.dir\build.make CMakeFiles/File_Management_System.dir/File_Management.cpp.i
-.PHONY : File_Management.cpp.i
+FileManagement.cpp.i:
+	$(MAKE) -f CMakeFiles\File_Management_System.dir\build.make CMakeFiles/File_Management_System.dir/FileManagement.cpp.i
+.PHONY : FileManagement.cpp.i
 
-File_Management.s: File_Management.cpp.s
+FileManagement.s: FileManagement.cpp.s
 
-.PHONY : File_Management.s
+.PHONY : FileManagement.s
 
 # target to generate assembly for a file
-File_Management.cpp.s:
-	$(MAKE) -f CMakeFiles\File_Management_System.dir\build.make CMakeFiles/File_Management_System.dir/File_Management.cpp.s
-.PHONY : File_Management.cpp.s
+FileManagement.cpp.s:
+	$(MAKE) -f CMakeFiles\File_Management_System.dir\build.make CMakeFiles/File_Management_System.dir/FileManagement.cpp.s
+.PHONY : FileManagement.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -185,9 +185,9 @@ help:
 	@echo ... File_Management_System
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... File_Management.obj
-	@echo ... File_Management.i
-	@echo ... File_Management.s
+	@echo ... FileManagement.obj
+	@echo ... FileManagement.i
+	@echo ... FileManagement.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
