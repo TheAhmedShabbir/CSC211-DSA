@@ -3,4 +3,4 @@ project(File_Management_System)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(File_Management_System main.cpp)
+add_executable(File_Management_System main.cpp "FileManagement.cpp")

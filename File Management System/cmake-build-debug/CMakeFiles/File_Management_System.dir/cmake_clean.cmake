@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/File_Management_System.dir/File_Management.cpp.obj"
   "CMakeFiles/File_Management_System.dir/main.cpp.obj"
   "File_Management_System.exe"
   "File_Management_System.exe.manifest"

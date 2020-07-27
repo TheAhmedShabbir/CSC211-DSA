@@ -82,6 +82,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="E:/CSC211-DSA/File Management System/File Management.cpp">
+			<Option target="File_Management_System"/>
+		</Unit>
 		<Unit filename="E:/CSC211-DSA/File Management System/main.cpp">
 			<Option target="File_Management_System"/>
 		</Unit>
