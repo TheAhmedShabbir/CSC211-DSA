@@ -31,14 +31,21 @@ public:
             fileData[counter].nextIndex = -1;
         }
         fileData[99].nextIndex = -3;
-    }
 
-    bool deleteFile(char FileName[],char ext[]){
 
     }
 
-    bool viewFile(char FileName[],char ext[]){
-        if(FileName[counter] != fileInfo->fileName && ext[counter] != fileInfo->fileExt) {
+    void deleteFile(char FileName[],char ext[]){
+        if(FileName[counter] != fileInfo->fileName || ext[counter] != fileInfo->fileExt) {
+            cout << "File not Exist!!\n";
+        } else {
+            fileData->nextIndex = -1;
+            fileInfo[counter].fileIndex = -1;
+        }
+    }
+
+    void viewFile(char FileName[],char ext[]){
+        if(FileName[counter] != fileInfo->fileName || ext[counter] != fileInfo->fileExt) {
             cout << "File not Exist!!\n";
         } else
             cout << fileData->Data;

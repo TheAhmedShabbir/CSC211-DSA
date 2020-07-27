@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-    int choice,counter = 0;
+    int choice;
     char fName[Size],fExt[4];
     FileManagement File{};
 
@@ -15,7 +15,15 @@ int main() {
             "Press 3 to view file\n";
     cin >> choice;
 
-    if (choice == 3){
+    if(choice == 2){
+        cout << "Enter File Name \n";
+        cin >> fName;
+        cout << "Enter File extention \n";
+        cin >> fExt;
+
+        File.deleteFile(fName,fExt);
+    }
+    else if (choice == 3){
         cout << "Enter File Name \n";
         cin >> fName;
         cout << "Enter File extention \n";
